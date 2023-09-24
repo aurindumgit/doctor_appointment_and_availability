@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Welcome</h2>
+    <p>You have successfully logged in.</p>
+    <p>Where are you experiencing problem?</p>
+    <form action="#" method="GET">
+        <input type="text" name="search" id="search" placeholder="doc/hostpital/problem...">
+        <button type="submit">Search</button>
+        <button type="button" id="clearButton">Clear</button>
+    </form>
+
+    <script>
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('search').value = '';
+        });
+    </script><br><br>
+    <p>Most common problems</p>
+    <button onclick="filterDoctors('Head Specialist')">Head</button><br><br>
+    <button onclick="filterDoctors('Eye Specialist')">Eye</button><br><br>
+    <button onclick="filterDoctors('Body Specialist')">Body</button><br><br>
+    <button onclick="filterDoctors('Chest/Heart Specialist')">Chest/Heart</button><br><br>
+    <button onclick="filterDoctors('Stomach Specialist')">Stomach</button><br><br>
+    
+    <br><br><br>
+    <button onclick="location.href='login.html'">go back</button>
+    <div id="doctors-container"></div>
+  
+    <script src="script.js"></script>
+</body>
+</html>

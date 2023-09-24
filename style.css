@@ -1,0 +1,85 @@
+/* Reset some default styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Container for the search form */
+form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the search input and buttons */
+#search {
+    padding: 5px;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#clearButton {
+    background-color: #dc3545;
+}
+
+/* Style the specialty buttons */
+button[onclick^="filterDoctors('"] {
+    background-color: #17a2b8;
+    margin: 10px 0;
+}
+
+/* Styling for the doctors container */
+#doctors-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for individual doctor info */
+.doctor-info {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Styling for the "go back" button */
+button[onclick="location.href='login.html'"] {
+    background-color: #343a40;
+}
+/* Style for the "Book Appointment" buttons */
+.book-appointment {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right; /* Align the button to the right side of the result */
+}
+
+
+.doctor-info::after {
+    content: "";
+    display: table;
+    clear: both;
+}
